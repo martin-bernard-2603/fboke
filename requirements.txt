@@ -1,2 +1,5 @@
 streamlit
 pyrebase4
+google-auth
+google-auth-oauthlib
+google-cloud-storage
