@@ -2,18 +2,9 @@ import streamlit as st
 import pyrebase
 
 # Konfigurasi Firebase
-firebase_config = {
-    "apiKey": "AIzaSyC_xc9BJVQvKkpe3jIbtd8tGir4svj4gIY",
-    "authDomain": "belajar-firestore-d98f9.firebaseapp.com",
-    "databaseURL": "https://belajar-firestore-d98f9-default-rtdb.firebaseio.com",
-    "projectId": "belajar-firestore-d98f9",
-    "storageBucket": "belajar-firestore-d98f9.firebasestorage.app",
-    "messagingSenderId": "433046519507",
-    "appId": "1:433046519507:web:0b92823e8821795d775e26",
-    "measurementId": "G-7P0ZL6JFZR"
-}
 
 # Inisialisasi Firebase
+firebase_config = st.secrets["firebase"]
 firebase = pyrebase.initialize_app(firebase_config)
 db = firebase.database()
 
